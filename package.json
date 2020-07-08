@@ -1,11 +1,15 @@
 {
   "name": "file-sort",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "lochmann",
+  "main": "./lib/index.js",
+  "bin": {
+    "imageSorter": "./bin/index.js"
+  },
   "license": "ISC",
   "keywords": [],
   "description": "",
