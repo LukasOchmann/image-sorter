@@ -1,0 +1,17 @@
+{
+  "name": "file-sort",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lochmann",
+  "license": "ISC",
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "exiftool2": "^1.0.1",
+    "minimist": "^1.2.5",
+    "node-watch": "^0.6.4"
+  }
+}
