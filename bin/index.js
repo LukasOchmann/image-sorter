@@ -1,30 +1,34 @@
 #!/usr/bin/env node
 let minimist = require('minimist');
 const sort = require('../lib/index');
+let pkg = require('../package.json');
 
 (function () {
 
   const argv = minimist(process.argv.slice(2));
 
   if(argv['help']) {
-    console.log('image-sorter');
-    console.log('\t--input path/to/images         the root path to the images.')
-    console.log('\t--output path/to/output        the root path to the output folder.')
-    console.log('\t--help                         Shows help');
+    console.log('imageSorter [options] source destination');
+    console.log('\t --executable path/executable  The path the executable.')
+    console.log('\t--help                         Shows help.');
     return;
   }
 
-  const input = argv['input'];
-  const output = argv['output'];
+  const input = argv._[0];
+  const output = argv._[1];
+
+  const executable = argv['executable'] ? argv['executable'] : pkg.imageSorterConfig.executablePath;
 
   if(!input) {
-    throw Error("Input is not set");
+    console.error("Input is not set");
+    return;
   }
 
   if(!output) {
-    throw Error("Output is not set");
+    console.error("Output is not set");
+    return;
   }
 
-  sort(input, output);
+  sort(input, output, executable);
 
 })();

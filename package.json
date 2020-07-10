@@ -1,19 +1,23 @@
 {
-  "name": "file-sort",
+  "name": "imageSorter",
   "version": "1.0.0",
-  "main": "lib/index.js",
+  "main": "./lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node ./scripts/install.js"
   },
   "author": "lochmann",
-  "main": "./lib/index.js",
   "bin": {
     "imageSorter": "./bin/index.js"
+  },
+  "imageSorterConfig": {
+    "executablePath": "./vendor/Image-ExifTool-12.01/exiftool"
   },
   "license": "ISC",
   "keywords": [],
   "description": "",
   "dependencies": {
+    "gunzip-maybe": "^1.4.2",
     "minimist": "^1.2.5"
   }
 }
