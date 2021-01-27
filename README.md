@@ -17,3 +17,10 @@ They will be moved into folders by their creation date.
 Imaged created on 2020-07-08 will be sorted in to `/path/to/output/2020/07/08/`
 
 
+
+`--executable path/executable` default: `"./vendor/Image-ExifTool-12.01/exiftool"`
+The Path to the Exif executable.
+
+`--copy` default: `false`
+If true file will be copied instead of moved
+
