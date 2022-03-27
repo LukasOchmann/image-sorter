@@ -17,6 +17,6 @@
   "description": "",
   "dependencies": {
     "gunzip-maybe": "^1.4.2",
-    "minimist": "^1.2.5"
+    "minimist": "^1.2.6"
   }
 }
